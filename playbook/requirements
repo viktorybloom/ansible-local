@@ -3,11 +3,8 @@ docker-compose
 docker.io
 git
 grep
-i3
-i3status
 ibreoffice-calc
 libreoffice-writer
-mainline
 neofetch
 neovim
 rpi-imager
@@ -15,4 +12,3 @@ terraform
 tmux
 tree
 wget
-xbacklight
