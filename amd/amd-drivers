@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Function to confirm reboot
+confirm_reboot() {
+    read -r -p "Do you want to reboot now? (yes/no): " choice
+    case "$choice" in
+        y|Y|yes|Yes|YES) reboot_now=true;;
+        *) reboot_now=false;;
+    esac
+}
+
 # Update system
 sudo pacman -Syu --noconfirm
 
@@ -17,6 +26,13 @@ sudo pacman -S xf86-video-amdgpu --noconfirm
 sudo sed -i 's/MODULES=()/MODULES=(amdgpu)/' /etc/mkinitcpio.conf
 sudo mkinitcpio -P
 
-# Reboot
-sudo reboot
+# Confirm reboot
+confirm_reboot
 
+# Display message and reboot if chosen
+if [ "$reboot_now" = true ]; then
+    echo "Rebooting the system..."
+    sudo reboot
+else
+    echo "Please reboot your system later to apply the changes."
+fi
