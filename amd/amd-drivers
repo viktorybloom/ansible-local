@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Update system
+sudo pacman -Syu --noconfirm
+
+# Install required packages
+sudo pacman -S linux-headers base-devel --noconfirm
+
+# Identify GPU
+gpu_info=$(lspci | grep 'Display controller')
+echo "GPU Information: $gpu_info"
+
+# Install AMDGPU driver
+sudo pacman -S xf86-video-amdgpu --noconfirm
+
+# Enable Kernel Module
+sudo sed -i 's/MODULES=()/MODULES=(amdgpu)/' /etc/mkinitcpio.conf
+sudo mkinitcpio -P
+
+# Reboot
+sudo reboot
+
