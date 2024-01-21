@@ -1,5 +1,5 @@
-sudo apt update -y
-sudo apt full-upgrade -y
-sudo apt autoclean -y
-sudo apt clean -y
-sudo apt autoremove -y 
+sudo pacman -Syu --noconfirm
+sudo pacman -Sc --noconfirm
+sudo pacman -Scc --noconfirm
+sudo pacman -Rns $(pacman -Qtdq) --noconfirm
+
