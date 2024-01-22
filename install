@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-sudo pacman -Syyu 
-yes | sudo pacman -S ansible 
+sudo pacman -Syyu --noconfirm
+sudo pacman -S ansible --noconfirm
