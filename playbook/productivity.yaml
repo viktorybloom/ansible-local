@@ -1,0 +1,38 @@
+- name: kdenlive repository (Arch Linux)
+  become: true
+  pacman:
+    name: archlinuxcn
+    state: present
+    update_cache: true
+  tags:
+    - install
+    - productivity
+
+- name: shutter repository (Arch Linux)
+  become: true
+  pacman:
+    name: archlinuxcn
+    state: present
+    update_cache: true
+  tags:
+    - install
+    - productivity
+
+- name: Install packages including kdenlive and shutter
+  become: true
+  pacman:
+    name: 
+      - "tmux"
+      - "wireshark"
+      - "fzf"
+      - "kdenlive"
+      - "gimp"
+      - "xclip"
+      - "screenkey"
+      - "tldr"
+      - "ripgrep"
+      - "shutter"
+  tags:
+    - install
+    - productivity
+
