@@ -1,0 +1,56 @@
+- name: Install System Packages 1 (build-essential, cmake, pkg-config, pthread)
+  become: true
+  pacman:
+    name: ["base-devel", "cmake", "pkgconf", "libpthread-stubs"]
+  tags:
+    - install
+    - neovim
+    - core
+
+- name: Install System Packages 2 (lua, unzip, libtool, libtool-bin, gettext)
+  become: true
+  pacman:
+    name: 
+      - "lua"
+      - "unzip"
+      - "libtool"
+      - "gettext"
+  tags:
+    - install
+    - neovim
+    - core
+
+- name: Install System Packages 3 (the rest)
+  become: true
+  pacman:
+    name: 
+      - "picom"
+      - "curl"
+      - "htop"
+      - "ccache"  
+      - "tree"
+      - "go"
+      - "lsof"
+      - "ninja"
+      - "python-pip"
+      - "moreutils"
+      - "clang"
+  tags:
+    - install
+    - core
+
+- name: Install Clang
+  become: true
+  pacman:
+    name: ["clang", "clang-tools-extra"]
+  tags:
+    - install
+    - neovim
+    - core
+
+- name: Install Docker
+  become: true
+  pacman:
+    name: ["docker-compose", "docker.io"] 
+  tags:
+    - install 

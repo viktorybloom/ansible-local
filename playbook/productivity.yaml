@@ -23,13 +23,17 @@
   pacman:
     name: 
       - "tmux"
-      - "wireshark"
+      - "brightnessctl"  
       - "fzf"
       - "kdenlive"
       - "gimp"
       - "xclip"
       - "screenkey"
       - "tldr"
+      - "wget"
+      - "xclip"
+      - "curl"
+      - "tree"
       - "ripgrep"
       - "shutter"
   tags:
