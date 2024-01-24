@@ -17,3 +17,9 @@
 
     - name: Include playbook/core.yaml
       include_tasks: playbook/core.yaml
+
+        # docker playbook not running - investigate later.
+        # in the meantime run - https://docs.docker.com/engine/install/linux-postinstall/
+#    - name: Include playbook/docker.yaml
+#      include_tasks: playbook/docker.yaml
+

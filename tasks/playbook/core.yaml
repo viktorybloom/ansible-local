@@ -1,13 +1,13 @@
-- name: Install System Packages 1 (build-essential, cmake, pkg-config, pthread)
+- name: Install System Packages 1
   become: true
   pacman:
-    name: ["base-devel", "cmake", "pkgconf", "libpthread-stubs"]
+    name: ["base-devel", "cmake", "pkgconf"]
   tags:
     - install
     - neovim
     - core
 
-- name: Install System Packages 2 (lua, unzip, libtool, libtool-bin, gettext)
+- name: Install System Packages 2
   become: true
   pacman:
     name: 
@@ -20,7 +20,7 @@
     - neovim
     - core
 
-- name: Install System Packages 3 (the rest)
+- name: Install System Packages 3
   become: true
   pacman:
     name: 
@@ -39,18 +39,9 @@
     - install
     - core
 
-- name: Install Clang
-  become: true
-  pacman:
-    name: ["clang", "clang-tools-extra"]
-  tags:
-    - install
-    - neovim
-    - core
-
 - name: Install Docker
   become: true
   pacman:
-    name: ["docker-compose", "docker.io"] 
+    name: ["docker-compose", "docker"] 
   tags:
     - install 
