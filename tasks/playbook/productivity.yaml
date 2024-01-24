@@ -1,7 +1,7 @@
 - name: kdenlive repository (Arch Linux)
   become: true
   pacman:
-    name: archlinuxcn
+    name: kdenlive
     state: present
     update_cache: true
   tags:
@@ -11,7 +11,7 @@
 - name: shutter repository (Arch Linux)
   become: true
   pacman:
-    name: archlinuxcn
+    name: shutter
     state: present
     update_cache: true
   tags:
@@ -25,9 +25,9 @@
       - "tmux"
       - "brightnessctl"  
       - "fzf"
-      - "kdenlive"
       - "gimp"
       - "xclip"
+      - "kdenlive"
       - "screenkey"
       - "tldr"
       - "wget"
