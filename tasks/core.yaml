@@ -24,7 +24,6 @@
   become: true
   pacman:
     name: 
-      - "picom"
       - "curl"
       - "htop"
       - "ccache"  
@@ -35,9 +34,44 @@
       - "python-pip"
       - "moreutils"
       - "clang"
+      - "zsh"
+      - "neofetch"
   tags:
     - install
     - core
+
+- name: Install System Packages 4
+  become: true
+  pacman:
+    name: 
+      - "picom"
+      - "rofi"
+      - "xorg"
+      - "feh"
+      - "lxappearance"
+      - "ttf-font-awesome"
+      - "shutter"
+      - "ttf-droid"
+      - "pacman-contrib"
+  tags:
+    - install
+    - core
+    - arch
+      
+- name: Install System Packages 5 
+  become: true
+  pacman:
+    name: 
+      - "pulseaudio-alsa"
+      - "pulseaudio-bluetooth"
+      - "pulseaudio-equalizer"
+      - "pulseaudio-jack"
+      - "alsa-utils"
+      - "playerctl"
+  tags:
+    - install
+    - core
+    - arch
 
 - name: Install Docker
   become: true
