@@ -1,3 +1,10 @@
+- name: installing stow
+  pacman: stow
+  tags: 
+    - install
+    - dotfiles 
+    - stow 
+
 - name: cloning .dotfiles
   ansible.builtin.git:
     repo: 'git@github.com:viktorybloom/.dotfiles.git'
@@ -9,3 +16,12 @@
   tags:
     - install
     - dotfiles
+    - stow
+
+- name: stow dotfiles
+  shell: cd $HOME/.dotfiles && ./arch
+  tags: 
+    - install 
+    - dotfiles
+    - stow
+
