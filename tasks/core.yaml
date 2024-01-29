@@ -52,6 +52,7 @@
       - "ttf-font-awesome"
       - "shutter"
       - "ttf-droid"
+      - "ttf-ubuntu-font-family"
       - "pacman-contrib"
   tags:
     - install
