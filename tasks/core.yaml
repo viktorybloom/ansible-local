@@ -69,6 +69,7 @@
       - "pulseaudio-jack"
       - "alsa-utils"
       - "playerctl"
+      - "dunst"
   tags:
     - install
     - core
