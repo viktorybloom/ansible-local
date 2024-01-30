@@ -70,6 +70,7 @@
       - "alsa-utils"
       - "playerctl"
       - "dunst"
+      - "powerprofilesctl"
   tags:
     - install
     - core
