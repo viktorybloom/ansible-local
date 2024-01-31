@@ -53,6 +53,7 @@
       - "shutter"
       - "ttf-droid"
       - "ttf-ubuntu-font-family"
+      - "nerd-fonts"
       - "pacman-contrib"
       - "polybar"
   tags:
