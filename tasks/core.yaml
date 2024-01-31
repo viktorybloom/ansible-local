@@ -70,7 +70,7 @@
       - "alsa-utils"
       - "playerctl"
       - "dunst"
-      - "powerprofilesctl"
+      - "cpupower"
   tags:
     - install
     - core
