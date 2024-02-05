@@ -21,6 +21,8 @@
   pacman:
     name: 
       - "tmux"
+      - "alacritty"
+      - "stow"
       - "fzf"
       - "gimp"
       - "xclip"
