@@ -21,7 +21,6 @@
   pacman:
     name: 
       - "tmux"
-      - "brightnessctl"  
       - "fzf"
       - "gimp"
       - "xclip"
