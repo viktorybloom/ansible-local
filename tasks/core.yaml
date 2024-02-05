@@ -70,6 +70,17 @@
     - core
     - arch
 
+- name: Install System Packages 6 sway specific packages 
+  become: true
+  pacman:
+    name: 
+      - "wofi"
+  tags:
+    - install
+    - core
+    - arch
+
+
 - name: Install Docker
   become: true
   pacman:
