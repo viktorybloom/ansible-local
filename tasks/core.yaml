@@ -75,6 +75,8 @@
   pacman:
     name: 
       - "wofi"
+      - "waybar"
+      - "wofi"
   tags:
     - install
     - core
