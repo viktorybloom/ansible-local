@@ -47,6 +47,7 @@
       - "ttf-font-awesome"
       - "ttf-droid"
       - "ttf-ubuntu-font-family"
+      - "ttf-nerd-fonts-victor-mono"
       - "nerd-fonts"
       - "pacman-contrib"
   tags:

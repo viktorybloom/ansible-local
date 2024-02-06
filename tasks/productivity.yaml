@@ -2,40 +2,25 @@
   pacman:
     update_cache: yes
 
-- name: Clone Yay repository
-  git:
-    repo: 'https://aur.archlinux.org/yay.git'
-    dest: '/tmp/yay'
-    version: master
-
-- name: Build and install Yay
-  command: chdir=/tmp/yay makepkg -si
-
-- name: Install AUR packages
-  yay:
-    name:
-      - "autotiling"
-    state: present
-
-- name: kdenlive repository (Arch Linux)
+- name: Install kdenlive
   become: true
   pacman:
-    name: kdenlive
+    name: "kdenlive"
     update_cache: true
   tags:
     - install
     - productivity
 
-- name: shutter repository (Arch Linux)
+- name: Install shutter
   become: true
   pacman:
-    name: shutter
+    name: "shutter"
     update_cache: true
   tags:
     - install
     - productivity
 
-- name: Install packages including kdenlive and shutter
+- name: Install packages
   become: true
   pacman:
     name: 
