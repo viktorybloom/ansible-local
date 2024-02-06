@@ -1,3 +1,22 @@
+- name: Update package cache
+  pacman:
+    update_cache: yes
+
+- name: Clone Yay repository
+  git:
+    repo: 'https://aur.archlinux.org/yay.git'
+    dest: '/tmp/yay'
+    version: master
+
+- name: Build and install Yay
+  command: chdir=/tmp/yay makepkg -si
+
+- name: Install AUR packages
+  yay:
+    name:
+      - "autotiling"
+    state: present
+
 - name: kdenlive repository (Arch Linux)
   become: true
   pacman:

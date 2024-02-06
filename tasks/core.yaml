@@ -1,7 +1,7 @@
 - name: Install System Packages 1
   become: true
   pacman:
-    name: ["base-devel", "cmake", "pkgconf"]
+    name: ["git", "base-devel", "cmake", "pkgconf"]
   tags:
     - install
     - neovim
@@ -65,6 +65,7 @@
       - "alsa-utils"
       - "playerctl"
       - "dunst"
+      - "bluetoothctl"
   tags:
     - install
     - core
@@ -76,12 +77,10 @@
     name: 
       - "wofi"
       - "waybar"
-      - "wofi"
   tags:
     - install
     - core
     - arch
-
 
 - name: Install Docker
   become: true
