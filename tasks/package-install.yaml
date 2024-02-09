@@ -3,7 +3,7 @@
   pacman:
     name: "{{ item }}"
     state: present
-  loop: "{{ packages.productivity }}"
+  loop: "{{ productivity }}"
   tags:
     - install
     - core
@@ -13,7 +13,7 @@
   pacman:
     name: "{{ item }}"
     state: present
-  loop: "{{ packages.utilities }}"
+  loop: "{{ utilities }}"
   tags:
     - install
     - core 
@@ -23,16 +23,16 @@
   pacman:
     name: "{{ item }}"
     state: present
-  loop: "{{ packages.development }}"
+  loop: "{{ development }}"
   tags:
     - install
     - core 
 
       
 - name: Install AUR Packages
-  become: true
+  become: false 
   command: yay -S {{ item }} --noconfirm
-  loop: "{{ packages.aur_packages }}"
+  loop: "{{ aur_packages }}"
   tags:
     - install
     - core 

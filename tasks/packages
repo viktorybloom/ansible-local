@@ -34,7 +34,7 @@ utilities:
   - alsa-utils
   - playerctl
   - pacman-contrib
-  - ttf-nerd-fonts-victor-mono
+  - ttf-victor-mono-nerd
 
 development:
   - git
