@@ -1,0 +1,41 @@
+- name: Install Productivity Packages
+  become: true
+  pacman:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ packages.productivity }}"
+  tags:
+    - install
+    - core
+
+- name: Install Utilities Packages
+  become: true
+  pacman:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ packages.utilities }}"
+  tags:
+    - install
+    - core 
+
+- name: Install Development Packages
+  become: true
+  pacman:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ packages.development }}"
+  tags:
+    - install
+    - core 
+
+      
+- name: Install AUR Packages
+  become: true
+  command: yay -S {{ item }} --noconfirm
+  loop: "{{ packages.aur_packages }}"
+  tags:
+    - install
+    - core 
+
+
+
