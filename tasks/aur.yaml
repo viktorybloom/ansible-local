@@ -20,3 +20,6 @@
         cmd: chdir=/tmp/yay makepkg -si
       become: true
 
+
+
+        # Packages, swaylock-effects

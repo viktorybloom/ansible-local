@@ -1,0 +1,60 @@
+# AUR Packages
+
+aur_packages:
+  - swaylock-effects
+
+# Pacman Packages
+
+productivity:
+  - neovim
+  - tmux
+  - alacritty
+  - stow
+  - fzf
+  - gimp
+  - kdenlive
+  - screenkey
+  - tldr
+  - wget
+  - xclip
+  - curl
+  - tree
+  - ripgrep
+  - telegram-desktop
+  - neofetch
+
+utilities:
+  - bluez-utils
+  - wofi
+  - waybar
+  - pulseaudio-alsa
+  - pulseaudio-bluetooth
+  - pulseaudio-equalizer
+  - pulseaudio-jack
+  - alsa-utils
+  - playerctl
+  - pacman-contrib
+  - ttf-nerd-fonts-victor-mono
+
+development:
+  - git
+  - base-devel
+  - cmake
+  - pkgconf
+  - docker
+  - docker-compose
+  - lua
+  - unzip
+  - libtool
+  - gettext     
+  - curl
+  - htop
+  - ccache 
+  - tree
+  - go
+  - lsof
+  - ninja
+  - python-pip
+  - moreutils
+  - clang
+  - zsh
