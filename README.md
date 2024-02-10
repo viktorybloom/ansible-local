@@ -8,3 +8,6 @@ So it may look incomplete, but got me to a running environment, but no doubt on 
 Run `ansible-playbook --ask-become-pass local_playbook.yaml`
 
 For vault protected auth passwords and tokens, use `ansible-vault encrypt/decrypt ...`
+
+### Notes: 
+Full playbook assumes base Arch install.  
