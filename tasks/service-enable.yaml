@@ -1,0 +1,14 @@
+- name: Enable services
+  become: true
+  systemd:
+    name: "{{ item }}"
+    enabled: yes
+    state: started
+  loop: "{{ services }}"
+  tags:
+    - install
+    - core
+    - services
+
+
+

@@ -1,3 +1,12 @@
+# Services
+services: 
+  - sway
+  - ly
+  - NetworkManager
+  - bluetooth
+  - pulseaudio
+  - polkit
+
 # AUR Packages
 
 aur_packages:
