@@ -19,7 +19,6 @@ productivity:
   - neovim
   - tmux
   - alacritty
-  - stow
   - fzf
   - gimp
   - kdenlive
