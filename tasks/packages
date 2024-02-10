@@ -25,6 +25,15 @@ productivity:
   - neofetch
 
 utilities:
+  - sway
+  - swayidle
+  - brightnessctl
+  - pavucontrol
+  - swaybg
+  - grim
+  - dmenu
+  - slurp
+  - xorg-xwayland
   - bluez-utils
   - wofi
   - waybar
