@@ -13,11 +13,11 @@
         - install
         - core
   tasks: 
-    - include_vars: 
-        file: ./tasks/packages
-#    - include_tasks: tasks/ssh.yaml
-    - include_tasks: tasks/package-dependencies.yaml
-    - include_tasks: tasks/package-install.yaml
+#    - include_vars: 
+#        file: ./tasks/packages
+    - include_tasks: tasks/ssh.yaml
+#    - include_tasks: tasks/package-dependencies.yaml
+#    - include_tasks: tasks/package-install.yaml
 #    - include_tasks: tasks/git-setup.yaml
 #    - include_tasks: tasks/dotfiles.yaml
 

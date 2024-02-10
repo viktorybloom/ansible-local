@@ -5,7 +5,7 @@ So it may look incomplete, but got me to a running environment, but no doubt on 
 
 ### Run instructions
 
-Run `ansible-playbook --ask-become-pass local_playbook.yaml`
+Run `ansible-playbook --ask-become-pass --ask-vault-pass local_playbook.yaml`
 
 For vault protected auth passwords and tokens, use `ansible-vault encrypt/decrypt ...`
 

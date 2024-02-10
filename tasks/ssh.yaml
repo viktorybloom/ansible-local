@@ -7,7 +7,8 @@
     - dotfiles
     - install
     - ssh
-- name: Install ssh key
+
+- name: Transfer encrypted SSH private key
   copy:
     src: "{{ source_key }}"
     dest: "{{ dest_key }}"
@@ -16,6 +17,16 @@
     - dotfiles
     - install
     - ssh
+
+- name: Decrypt SSH private key
+  ansible.builtin.expect:
+    command: "ansible-vault decrypt {{ dest_key }}"
+    responses:
+      "Enter Vault password": "{{ vault_password }}"
+  when: "'vault' in dest_key" 
+  tags:
+    - decrypt
+
 - name: Install ssh key public
   copy:
     src: "{{ source_key }}.pub"
@@ -25,10 +36,5 @@
     - dotfiles
     - install
     - ssh
-- name: Set authorized key took from file
-  authorized_key:
-    user: "{{ lookup('env', 'USER') }}"
-    state: present
-    key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa.pub"
-  with_fileglob:
-  - "{{ lookup('env', 'HOME') }}/.ssh/*.pub"
+
+
