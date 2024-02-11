@@ -1,16 +1,18 @@
 # Services
 services: 
-  - sway
+  - sway !
   - ly
-  - NetworkManager
+  - Networkd !~
   - bluetooth
-  - pulseaudio
+  - pulseaudio !
   - polkit
+  - docker
 
 # AUR Packages
 
 aur_packages:
   - swaylock-effects
+  - autotiling
 
 # Pacman Packages
 
