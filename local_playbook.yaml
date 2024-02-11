@@ -20,6 +20,7 @@
     - include_tasks: tasks/package-install.yaml
     - include_tasks: tasks/git-setup.yaml
     - include_tasks: tasks/dotfiles.yaml
+    - include_tasks: tasks/service-enable.yaml
 
     # docker playbook not running - investigate later.
     # in the meantime run - https://docs.docker.com/engine/install/linux-postinstall/
