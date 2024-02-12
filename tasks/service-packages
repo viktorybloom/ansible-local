@@ -9,6 +9,7 @@ aur_packages:
   - swaylock-effects
   - autotiling
   - slack-desktop
+  - zoom
 
 # Pacman Packages
 
