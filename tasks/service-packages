@@ -1,11 +1,6 @@
 # Services
 services: 
-  - sway !
-  - ly
-  - Networkd !~
   - bluetooth
-  - pulseaudio !
-  - polkit
   - docker
 
 # AUR Packages
