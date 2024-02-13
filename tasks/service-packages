@@ -57,6 +57,12 @@ utilities:
   - ttf-victor-mono-nerd
   - ufw
   - fail2ban
+  # for obs screencapture
+  - qt5-wayland
+  - qt5ct
+  - pipewire
+  - xdg-desktop-portal
+  - xdg-desktop-portal-wlr
 
 development:
   - git
