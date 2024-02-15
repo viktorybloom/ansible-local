@@ -24,6 +24,7 @@ productivity:
   - gimp
   - kdenlive
   - screenkey
+  - thunar
   - tldr
   - wget
   - xclip
