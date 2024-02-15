@@ -45,6 +45,7 @@ utilities:
   - slurp
   - xorg-xwayland
   - bluez-utils
+  - dosfstools
   - wofi
   - waybar
   - pulseaudio-alsa
