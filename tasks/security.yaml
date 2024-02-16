@@ -1,0 +1,32 @@
+---
+
+- name: Setup UFW rules
+  become: true
+  shell:
+    cmd: "ufw {{ item.rule }} {{ item.args | default('') }}"
+  loop:
+    - { rule: "allow", args: "80/tcp" }
+    - { rule: "allow", args: "443/tcp" }
+    - { rule: "deny", args: "in from any" }
+    - { rule: "allow", args: "out to any" }
+
+- name: Harden /etc/sysctl.conf
+  become: true
+  shell:
+    cmd: "sysctl {{ item }}"
+  loop:
+    - "kernel.modules_disabled=1"
+    - "-a"
+    - "-A"
+    - "net.ipv4.conf.all.rp_filter"
+    - "-a --pattern 'net.ipv4.conf.(eth0|wlan0).arp'"
+
+- name: Prevent IP Spoofs
+  become: true
+  copy:
+    content: |
+      order bind,hosts
+      multi on
+    dest: /etc/host.conf
+
+
