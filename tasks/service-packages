@@ -57,6 +57,7 @@ utilities:
   - alsa-utils
   - playerctl
   - pacman-contrib
+  - ttf-ubuntu-mono-nerd
   - ttf-victor-mono-nerd
   - ufw
   - fail2ban
