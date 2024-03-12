@@ -11,3 +11,4 @@ For vault protected auth passwords and tokens, use `ansible-vault encrypt/decryp
 
 ### Notes: 
 Full playbook assumes base Arch install.  
+Also... do remember to restart for all services and packages to work. 

@@ -1,30 +1,28 @@
----
-- name: Configure Docker group and add user to it
-  become: yes
-  tasks:
-    - name: Start Docker service
-      become: true
-      systemd:
-        name: docker
-        state: started
-        enabled: yes
-
-    - name: Create Docker group
-      group:
-        name: docker
-        state: present
-
-    - name: Add user to Docker group
-      user:
-        name: "{{ ansible_user }}"
-        groups: docker
-        append: yes
-
-    - name: Switch to the Docker group
-      command: newgrp docker
-      become_user: "{{ ansible_user }}"
-
-  tags: 
+- name: Start Docker service
+  become: true
+  systemd:
+    name: docker
+    state: started
+    enabled: yes
+  tags:
     - docker
 
+- name: Create Docker group
+  group:
+    name: docker
+    state: present
+  tags:
+    - docker
+
+- name: Add user to Docker group
+  command: usermod -aG docker "{{ lookup('pipe', 'whoami') }}"
+  become: true
+  tags:
+    - docker
+
+- name: Switch to the Docker group
+  command: newgrp docker
+  become_user: "{{ lookup('pipe', 'whoami') }}"
+  tags:
+    - docker
 
