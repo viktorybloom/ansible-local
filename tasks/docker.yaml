@@ -24,7 +24,7 @@
       command: newgrp docker
       become_user: "{{ ansible_user }}"
 
-- tags: 
+  tags: 
     - docker
 
 
