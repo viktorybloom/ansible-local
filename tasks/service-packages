@@ -24,7 +24,6 @@ productivity:
   - gimp
   - kdenlive
   - screenkey
-  - thunar
   - tldr
   - wget
   - xclip
@@ -34,22 +33,26 @@ productivity:
   - telegram-desktop
   - neofetch
   - obs-studio
+  - zsh
 
 utilities:
+  # basic wm setup
   - sway
   - swayidle
+  - swaybg
+  - dmenu
+  - wofi
+  - waybar
+  # Basic utilities
   - brightnessctl
   - pavucontrol
-  - swaybg
   - grim
-  - dmenu
   - slurp
   - xorg-xwayland
   - bluez-utils
   - dosfstools
   - sshpass
-  - wofi
-  - waybar
+  # audio drivers etc
   - pulseaudio-alsa
   - pulseaudio-bluetooth
   - pulseaudio-equalizer
@@ -57,8 +60,9 @@ utilities:
   - alsa-utils
   - playerctl
   - pacman-contrib
+  # fonts
   - ttf-ubuntu-mono-nerd
-  - ttf-victor-mono-nerd
+  # Security
   - ufw
   - fail2ban
   # for obs screencapture
@@ -67,6 +71,11 @@ utilities:
   - pipewire
   - xdg-desktop-portal
   - xdg-desktop-portal-wlr
+  # File management and volume management
+  - thunar
+  - thunar-volman
+  - gvfs
+  - gvfs-mtp
 
 development:
   - git
@@ -89,4 +98,3 @@ development:
   - python-pip
   - moreutils
   - clang
-  - zsh
