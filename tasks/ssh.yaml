@@ -26,6 +26,7 @@
   when: "'vault' in dest_key" 
   tags:
     - decrypt
+    - ssh
 
 - name: Install ssh key public
   copy:

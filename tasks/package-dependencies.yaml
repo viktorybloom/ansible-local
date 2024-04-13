@@ -4,12 +4,16 @@
     path: /tmp/yay
     state: directory
   become: true
+  tags: 
+    - arch
 
 - name: Clone yay-git from AUR
   ansible.builtin.git:
     repo: https://aur.archlinux.org/yay-git.git
     dest: /tmp/yay
   become: true
+  tags: 
+    - arch
 
 - name: Ensure write permissions for the directory
   ansible.builtin.file:
@@ -17,11 +21,15 @@
     state: directory
     mode: '0777'
   become: true
+  tags:
+    - arch
 
 - name: Build and install yay-git
   ansible.builtin.command:
     cmd: makepkg -si --noconfirm
     chdir: /tmp/yay
   become: false
+  tags: 
+    - arch 
 
    
