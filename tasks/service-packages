@@ -37,7 +37,8 @@ productivity:
 
 utilities:
   # basic wm setup
-  - sway
+	- sway
+  - swaybg
   - swayidle
   - swaybg
   - dmenu
