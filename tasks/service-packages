@@ -4,6 +4,7 @@ services:
   - docker
   - ufw
   - fail2ban
+  - ly
 
 # AUR Packages
 
