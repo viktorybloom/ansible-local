@@ -1,7 +1,8 @@
 # Services
 services: 
   - bluetooth
-  - docker
+  - docker.service
+  - containerd.service
   - ufw
   - fail2ban
   - ly
@@ -11,8 +12,8 @@ services:
 aur_packages:
   - swaylock-effects
   - autotiling
-  - slack-desktop
-  - zoom
+  #- slack-desktop
+  #- zoom
 
 # Pacman Packages
 
@@ -24,7 +25,7 @@ productivity:
   - fzf
   - gimp
   - kdenlive
-  - screenkey
+  #- screenkey
   - tldr
   - wget
   - xclip
