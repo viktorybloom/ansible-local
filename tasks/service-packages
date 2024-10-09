@@ -32,7 +32,7 @@ productivity:
   - curl
   - tree
   - ripgrep
-  - telegram-desktop
+  #- telegram-desktop
   - neofetch
   - obs-studio
   - zsh
