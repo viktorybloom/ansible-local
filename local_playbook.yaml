@@ -18,6 +18,7 @@
     - include_tasks: tasks/ssh.yaml
     - include_tasks: tasks/package-dependencies.yaml
     - include_tasks: tasks/package-install.yaml
+    - include_tasks: tasks/rust.yaml
     - include_tasks: tasks/git-setup.yaml
     - include_tasks: tasks/dotfiles.yaml
     - include_tasks: tasks/security.yaml

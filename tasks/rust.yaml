@@ -1,0 +1,22 @@
+- name: Install Rust using rustup
+  shell: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+  args:
+    executable: /bin/bash
+  tags:
+    - rust
+
+- name: Add Rust to PATH
+  lineinfile:
+    path: ~/.bashrc
+    line: 'export PATH="$HOME/.cargo/bin:$PATH"'
+    state: present
+  tags:
+    - rust
+
+- name: Source .bashrc to update PATH
+  shell: source ~/.bashrc
+  args:
+    executable: /bin/bash
+  tags:
+    - rust
+
