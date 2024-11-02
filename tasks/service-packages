@@ -103,3 +103,4 @@ development:
   - python-pip
   - moreutils
   - clang
+  - less
