@@ -104,3 +104,4 @@ development:
   - moreutils
   - clang
   - less
+  - platformio-core
