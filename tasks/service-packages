@@ -12,6 +12,7 @@ services:
 aur_packages:
   - swaylock-effects
   - autotiling
+  - brave
   #- slack-desktop
   #- zoom
 
